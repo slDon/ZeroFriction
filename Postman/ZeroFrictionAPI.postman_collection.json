@@ -1,0 +1,69 @@
+{
+	"info": {
+		"_postman_id": "73cde691-2932-425a-946b-2a591f648be6",
+		"name": "ZeroFrictionAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21302902"
+	},
+	"item": [
+		{
+			"name": "AddInvoice",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"date\": \"2023-02-23T16:51:03.323Z\",\r\n  \"description\": \"Test API Insert\",\r\n  \"totalAmount\": 2000,\r\n  \"invoiceItem\": [\r\n    {\r\n      \"amount\": 1000,\r\n      \"quantity\": 1,\r\n      \"unitPrice\": 1000,\r\n      \"lineAmount\": 1000\r\n    },\r\n    {\r\n      \"amount\": 1000,\r\n      \"quantity\": 5,\r\n      \"unitPrice\": 200,\r\n      \"lineAmount\": 1000\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7175/api/Invoices",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7175",
+					"path": [
+						"api",
+						"Invoices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateInvoice",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"date\": \"2023-02-23T16:51:03.323Z\",\r\n  \"description\": \"Test API Update\",\r\n  \"totalAmount\": 3000,\r\n  \"invoiceItem\": [\r\n    {\r\n      \"amount\": 2000,\r\n      \"quantity\": 2,\r\n      \"unitPrice\": 1000,\r\n      \"lineAmount\": 2000\r\n    },\r\n    {\r\n      \"amount\": 1000,\r\n      \"quantity\": 5,\r\n      \"unitPrice\": 200,\r\n      \"lineAmount\": 1000\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7175/api/Invoices\\3",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7175",
+					"path": [
+						"api",
+						"Invoices",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
